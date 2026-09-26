@@ -1,8 +1,6 @@
-id=TLC_Edits
-name=TLC_Edits
+id=TileCopy
+name=TileCopy
 description= 
 poster=poster.png
 tags=Build 41
 versionMin=41.0
-
-

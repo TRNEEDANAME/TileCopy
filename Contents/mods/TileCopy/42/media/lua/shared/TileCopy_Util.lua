@@ -58,10 +58,10 @@ function Util.isAdmin(playerObj)
     if not accessLevel then return false end
 
     accessLevel = tostring(accessLevel)
-    return accessLevel == "Admin"
-        or accessLevel == "Moderator"
-        or accessLevel == "Overseer"
-        or accessLevel == "GM"
+    return accessLevel == "admin"
+        or accessLevel == "moderator"
+        or accessLevel == "overseer"
+        or accessLevel == "gm"
 end
 
 --------------------------------------------------------------------------

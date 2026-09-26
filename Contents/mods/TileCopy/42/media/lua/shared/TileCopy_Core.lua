@@ -14,8 +14,6 @@ TileCopy.Core = TileCopy.Core or {}
 local Core = TileCopy.Core
 local Util = TileCopy.Util
 
--- B42 PropertyContainer uses :has() (the old :Is() is gone) and flags are
--- IsoFlagType enum values, so look each name up there first.
 local function propsHasFlag(props, flag)
     local key = (IsoFlagType and IsoFlagType[flag]) or flag
     if props.has and props:has(key) then return true end
@@ -357,7 +355,7 @@ function Core.areaToString(data)
 end
 
 --- Reverses Core.areaToString. Returns the captured-area table on success,
---- or nil plus a human-readable reason on failure.
+--- or nil plus reason on failure.
 function Core.areaFromString(str)
     Util.info("import: input", Util.preview(str))
     if not str or str == "" then return nil, "that field is empty" end
@@ -408,7 +406,7 @@ local function placeSprite(sq, spriteName)
         local props = ISMoveableSpriteProps.new(sprite)
         props.rawWeight = 10
         -- nil result is still a success for tiles that get merged into
-        -- something already there (wall overlays, trees, floor tiles).
+        -- something already there (wall overlays, floor tiles).
         local result = props:placeMoveableInternal(sq, instanceItem("Base.Plank"), spriteName)
         return result, true
     end
@@ -431,7 +429,7 @@ local function applyAttached(obj, rec)
     if isServer() then obj:transmitUpdatedSpriteToClients() end
 end
 
---- Plain decorative sprite (rug, clutter, grime) - no behaviour needed.
+--- Plain decorative sprite (rug, grime) - no behaviour needed.
 local function placeOverlay(sq, spriteName)
     local obj = IsoObject.new(sq, spriteName)
     if not obj then return nil end
