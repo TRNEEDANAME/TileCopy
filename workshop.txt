@@ -1,0 +1,16 @@
+version=1
+id=3795168279
+title=TLC_Edits
+description=[h2]Edit items & Recipes[/h2]
+description=
+description=[url=https://discord.gg/SReMnbV4V7][img]https://raw.githubusercontent.com/Chuckleberry-Finn/chuckImages/main/PZmodCommBanner2.png[/img][/url]
+description=
+description=
+<<<<<<< HEAD
+description=[h3]Copyright 2026 TRNEEDANAME. This item is not authorized for posting on Steam, except under the Steam account named TRNEEDANAME.[/h3]
+tags=Build 41
+=======
+description=[h3]Copyright 2026 <USERNAME>. This item is not authorized for posting on Steam, except under the Steam account named <USERNAME>.[/h3]
+tags=Build 42;Balance;Food;Items
+>>>>>>> 4f3a456e6e4621b5f71c581ec68e65b86683c58b
+visibility=unlisted
